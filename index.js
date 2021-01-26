@@ -3,12 +3,12 @@ const WebSocket = require('ws');
 const axios = require('axios');
 
 const server = https.createServer();
-const wss= new WebSocket.Server({ server });
+const ws= new WebSocket.Server({ server });
 
 let getInfoString = [];
 let getDate = [];
 let bitcoinPrice = [];
-wss.on('connection', function connection(ws) {
+ws.on('connection', function connection(ws) {
 
     sendResp('', 'WebSocket Connected', '')
   ws.on('message', function incoming(message) {
