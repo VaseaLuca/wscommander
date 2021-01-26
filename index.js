@@ -1,9 +1,9 @@
-const https = require('https');
+const http = require('http');
 const WebSocket = require('ws');
 const axios = require('axios');
 
-const server = https.createServer();
-const ws= new WebSocket.Server({ server });
+const server = http.createServer();
+const ws = new WebSocket.Server({ server });
 
 let getInfoString = [];
 let getDate = [];
@@ -94,11 +94,11 @@ function sendResp(command, respond, message) {
   ws.send(parcedObj);
 }
   ws.on('close', () => {
-    console.log(`Conection close ${ws.id}`)
+  
   })
   // ws.send('ready');
 });
 
 server.listen(process.env.PORT || 3000, () => {
-  console.log(`Server online`);
+
 });
