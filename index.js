@@ -1,8 +1,8 @@
-const http = require('https');
+const https = require('https');
 const WebSocket = require('ws');
 const axios = require('axios');
 
-const server = http.createServer();
+const server = https.createServer();
 const wss= new WebSocket.Server({ server });
 
 let getInfoString = [];
