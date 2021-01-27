@@ -64,7 +64,7 @@ ws.on('connection', function connection(ws) {
       getRates();
       break;
       case "help":
-      const helpResp = "'echo', 'bitcoin rates' - to get updated bitcoin's rate in USD, EUR, GBP, 'get EUR' - to get today's rates , 'clear', 'close'";
+      const helpResp = "'echo'; 'bitcoin rates' - to get updated bitcoin's rate in USD, EUR, GBP; 'get EUR' - to get today's rates; 'clear'; 'close'; 'working on other commands..'";
       sendResp(comand, helpResp, message);
       break;
       case "clear":
